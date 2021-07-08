@@ -17,6 +17,8 @@ services:
       - ./server:/app
     ports:
       - "9000:9000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
   mongo:
     image: library/mongo:4.4-bionic
     container_name: 'db-exam-wtat1-sose21-pz1'
